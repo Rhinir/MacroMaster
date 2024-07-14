@@ -15,4 +15,5 @@ MacroMaster is a web-based application built using Python and Flask. It leverage
 Shell Commands
 
 > `pip install -r requirements.txt`
+
 > `python app.py`
