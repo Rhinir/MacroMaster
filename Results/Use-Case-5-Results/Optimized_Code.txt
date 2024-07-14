@@ -1,0 +1,19 @@
+Limitations: The code does not account for scenarios where the worksheet might trigger an error, which could be fixed by adding an error check mechanism. Also, the code could be more efficient by incorporating the Sort method's ability to sort based on multiple columns simultaneously.
+
+Optimized Code:
+```
+Sub SortMultipleColumns()
+    With ActiveSheet.Sort
+        .SortFields.Clear
+        .SortFields.Add Key:=Range("A1:B1"), Order:=xlAscending, DataOption:=xlSortNormal
+        '.SortFields.Add Key:=Range("C1"), Order:=xlAscending 'Add this line if you want to sort a third column
+        .SetRange Range("A1:C13")
+        .Header = xlYes
+        On Error Resume Next
+        .Apply
+        On Error GoTo 0
+    End With
+End Sub
+```
+
+The output file is named "optimized_macro.txt"
