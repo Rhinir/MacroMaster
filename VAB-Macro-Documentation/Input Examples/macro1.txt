@@ -1,0 +1,127 @@
+Sub Macro1()
+
+‘
+
+‘ Macro1 Macro
+
+‘
+
+‘ Keyboard shortcut: Ctrl+r
+
+‘
+
+Dim rng As Range
+
+Set rng = ActiveSheet.Range(“A1”).CurrentRegion
+
+Application.CutCopyMode = False
+
+ActiveSheet.ListObjects.Add(xlSrcRange, rng, , xlYes).Name = “Tableau1”
+
+Range(“Tableau1[#All]”).Select
+
+ActiveSheet.ListObjects(“Tableau1”).TableStyle = “TableStyleMedium27”
+
+With Selection
+
+.HorizontalAlignment = xlCenter
+
+.VerticalAlignment = xlBottom
+
+.WrapText = False
+
+.Orientation = 0
+
+.AddIndent = False
+
+.IndentLevel = 0
+
+.ShrinkToFit = False
+
+.ReadingOrder = xlContext
+
+.MergeCells = False
+
+End With
+
+Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+
+Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+
+With Selection.Borders(xlEdgeLeft)
+
+.LineStyle = xlContinuous
+
+.ColorIndex = 0
+
+.TintAndShade = 0
+
+.Weight = xlThin
+
+End With
+
+With Selection.Borders(xlEdgeTop)
+
+.LineStyle = xlContinuous
+
+.ColorIndex = 0
+
+.TintAndShade = 0
+
+.Weight = xlThin
+
+End With
+
+With Selection.Borders(xlEdgeBottom)
+
+.LineStyle = xlContinuous
+
+.ColorIndex = 0
+
+.TintAndShade = 0
+
+.Weight = xlThin
+
+End With
+
+With Selection.Borders(xlEdgeRight)
+
+.LineStyle = xlContinuous
+
+.ColorIndex = 0
+
+.TintAndShade = 0
+
+.Weight = xlThin
+
+End With
+
+With Selection.Borders(xlInsideVertical)
+
+.LineStyle = xlContinuous
+
+.ColorIndex = 0
+
+.TintAndShade = 0
+
+.Weight = xlThin
+
+End With
+
+With Selection.Borders(xlInsideHorizontal)
+
+.LineStyle = xlContinuous
+
+.ColorIndex = 0
+
+.TintAndShade = 0
+
+.Weight = xlThin
+
+End With
+
+Cells.Select
+
+Cells.EntireColumn.AutoFit
+
+End Sub
