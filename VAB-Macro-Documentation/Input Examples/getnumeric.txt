@@ -1,0 +1,1 @@
+Function GetNumeric(CellRef As String)\nDim StringLength As Integer\nStringLength = Len(CellRef)\nFor i = 1 To StringLength\nIf IsNumeric(Mid(CellRef, i, 1)) Then Result = Result & Mid(CellRef, i, 1)\nNext i\nGetNumeric = Result\nEnd Function"

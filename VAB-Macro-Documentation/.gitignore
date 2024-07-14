@@ -1,0 +1,13 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+files/
+htmls/
+/Documentation.md
+/Documentation.pdf
+/flowchart.html
+/Functional_Logic.md
+/Functional_Logic.pdf
+/Optimized_Code.txt
+/Python_Code.py

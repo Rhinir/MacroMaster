@@ -1,0 +1,5 @@
+Sub HighlightBlankCells()
+Dim Dataset as Range
+Set Dataset = Selection
+Dataset.SpecialCells(xlCellTypeBlanks).Interior.Color = vbRed
+End Sub
